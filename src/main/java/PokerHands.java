@@ -36,15 +36,50 @@ public class PokerHands {
         }
     }
 
-    public int getDuplicateLength() {
-        return new HashSet<Integer>(nums).size();
+    public Map getDuplicateMap() {
+        Map<Integer, Integer> numsMap = new HashMap<>();
+        nums.forEach(num -> {
+            if (!numsMap.containsKey(num)) {
+                numsMap.put(num, 1);
+            } else {
+                Integer count = numsMap.get(num) + 1;
+                numsMap.put(num, count);
+            }
+        });
+        return numsMap;
     }
 
-    public int getPokerType() {
-        if (getDuplicateLength() == 4) {
-            return PokersType.PAIR.getType();
+    public List<Integer> getRepeatedNum() {
+        List<Integer> repeatedNums = new ArrayList<>();
+        Map<Integer, Integer> numsMap = getDuplicateMap();
+        for (Map.Entry<Integer, Integer> entry : numsMap.entrySet()) {
+            if (entry.getValue() > 1) {
+                repeatedNums.add(entry.getKey());
+            }
         }
-        return PokersType.HIGH_CARD.getType();
+        return repeatedNums;
+    }
+
+//    public int compareDuplicateMap(PokerHands pokerHands) {
+//        Map<Integer, Integer> numsMap = pokerHands.getDuplicateMap();
+//        for (Map.Entry<Integer, Integer> entry : numsMap.entrySet()) {
+//            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+//        }
+//    }
+
+
+    public int getPokerType() {
+        Map<Integer, Integer> numsMap = getDuplicateMap();
+        switch (numsMap.size()) {
+            case 3:
+                return PokersType.TWO_PAIRS.getType();
+            case 4:
+                return PokersType.PAIR.getType();
+            case 5:
+//                return PokersType.HIGH_CARD.getType();
+            default:
+                return PokersType.HIGH_CARD.getType();
+        }
     }
 
 

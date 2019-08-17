@@ -12,6 +12,17 @@ public class PokerCompare {
         if (pokerHands1.getPokerType() != pokerHands2.getPokerType()) {
             return pokerHands1.getPokerType() - pokerHands2.getPokerType() > 0 ? 1 : -1;
         }
+        switch (pokerHands1.getPokerType()) {
+            case 2:
+                int result = compareList(pokerHands1.getRepeatedNum(), pokerHands2.getRepeatedNum());
+                nums1.remove(pokerHands1.getRepeatedNum().get(0));
+                nums2.remove(pokerHands2.getRepeatedNum().get(0));
+                return result == 0 ? compareList(nums1, nums2) : result;
+        }
+        return compareList(nums1, nums2);
+    }
+
+    public int compareList(List<Integer> nums1, List<Integer> nums2) {
         for (int i = 0; i < nums1.size(); i++) {
             if (nums1.get(i) == null) {
                 break;
@@ -23,4 +34,5 @@ public class PokerCompare {
         }
         return 0;
     }
+
 }

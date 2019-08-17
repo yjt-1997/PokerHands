@@ -34,4 +34,14 @@ public class PokerCompareTest {
 
         Assert.assertEquals(result,1);
     }
+
+    @Test
+    public void should_bigPair_win_when_given_two_pairs(){
+        String pokers1 = "2H2D5S9CKD";
+        String pokers2 = "3C3D5S9CTD";
+
+        int result = compare.compare(pokers1,pokers2);
+
+        Assert.assertEquals(result,-1);
+    }
 }
