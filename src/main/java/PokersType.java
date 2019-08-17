@@ -2,7 +2,8 @@ public enum PokersType {
     HIGH_CARD(1),
     PAIR(2),
     TWO_PAIRS(3),
-    THREE_OF_A_KIND(4);
+    THREE_OF_A_KIND(4),
+    STRAIGHT(5);
 
     private int type;
 

@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.IntStream;
 
 public class PokerHands {
 
@@ -76,9 +77,16 @@ public class PokerHands {
             case 2:
                 return repeatedNums.size() == 3 ? PokersType.TWO_PAIRS.getType() : PokersType.PAIR.getType();
             case 1:
+                if (isStraight()) {
+                    return PokersType.STRAIGHT.getType();
+                }
             default:
                 return PokersType.HIGH_CARD.getType();
         }
+    }
+
+    public boolean isStraight() {
+        return IntStream.range(0, nums.size() - 1).noneMatch(i -> nums.get(i) - 1 != nums.get(i + 1));
     }
 
     public int getCountEqual(int count) {
