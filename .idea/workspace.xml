@@ -4,7 +4,6 @@
     <list default="true" id="625da450-a562-4da5-a85f-4931462207f8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PokerCompare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PokerCompare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PokerHands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PokerHands.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +177,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565934366017</updated>
-      <workItem from="1565934369226" duration="20167000" />
+      <workItem from="1565934369226" duration="20565000" />
     </task>
     <servers />
   </component>

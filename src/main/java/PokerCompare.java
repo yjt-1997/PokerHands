@@ -32,8 +32,10 @@ public class PokerCompare {
                 removeRepeatedFromList(nums2, pokerHands2.getRepeatedNum());
                 return result == 0 ? compareList(nums1, nums2) : result;
             }
+            case HIGH_CARD:
             case STRAIGHT:
-            case FLUSH: {
+            case FLUSH:
+            case STRAIGHT_FLUSH: {
                 return compareList(nums1, nums2);
             }
             case FULL_HOUSE: {
@@ -44,15 +46,14 @@ public class PokerCompare {
                     int twoOfP2 = pokerHands2.getCountEqual(2);
                     if (twoOfP1 == twoOfP2) {
                         return 0;
-                    } else {
-                        return twoOfP1 > twoOfP2 ? 1 : -1;
                     }
-                } else {
-                    return threeOfP1 > threeOfP2 ? 1 : -1;
+                    return twoOfP1 > twoOfP2 ? 1 : -1;
                 }
+                return threeOfP1 > threeOfP2 ? 1 : -1;
             }
+            default:
+                return null;
         }
-        return compareList(nums1, nums2);
     }
 
     public void removeRepeatedFromList(List<Integer> origin, List<Integer> repeated) {
