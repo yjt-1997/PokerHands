@@ -134,4 +134,14 @@ public class PokerCompareTest {
 
         Assert.assertEquals(result, -1);
     }
+
+    @Test
+    public void should_bigFullHouse_win_when_given_twoFullHouse() {
+        String pokers1 = "2H2D6S6C2D";
+        String pokers2 = "3H3D5S5C3D";
+
+        int result = compare.compare(pokers1, pokers2);
+
+        Assert.assertEquals(result, -1);
+    }
 }

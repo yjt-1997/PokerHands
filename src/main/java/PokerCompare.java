@@ -12,7 +12,7 @@ public class PokerCompare {
         int a = pokerHands1.calculateType();
         int b = pokerHands2.calculateType();
         if (pokerHands1.calculateType() != pokerHands2.calculateType()) {
-            return pokerHands1.calculateType() - pokerHands2.calculateType() > 0 ? 1 : -1;
+            return pokerHands1.calculateType() > pokerHands2.calculateType() ? 1 : -1;
         }
         switch (pokerHands1.calculateType()) {
             //单对和双对的比较方式是一样的
@@ -27,6 +27,23 @@ public class PokerCompare {
             case 5:
             case 6: {
                 return compareList(nums1, nums2);
+            }
+            case 7: {
+                int threeOfP1 = pokerHands1.getCountEqual(3);
+                int threeOfP2 = pokerHands2.getCountEqual(3);
+                if (threeOfP1 == threeOfP2) {
+                    int twoOfP1 = pokerHands1.getCountEqual(2);
+                    int twoOfP2 = pokerHands2.getCountEqual(2);
+                    if (twoOfP1 > twoOfP2) {
+                        return 1;
+                    } else if (twoOfP1 < twoOfP2) {
+                        return -1;
+                    } else {
+                        return 0;
+                    }
+                } else {
+                    return threeOfP1 > threeOfP2 ? 1 : -1;
+                }
             }
         }
         return compareList(nums1, nums2);
