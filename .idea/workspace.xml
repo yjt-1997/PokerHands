@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="625da450-a562-4da5-a85f-4931462207f8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PokerCompare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PokerCompare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PokerHands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PokerHands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PokersType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PokersType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PokerCompareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PokerCompareTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,7 +58,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.PokerCompareTest.should_bigStraight_win_when_given_two_straight">
+  <component name="RunManager" selected="Gradle.PokerCompareTest.should_compare_correct_when_given_two_chars">
     <configuration name="PokerCompareTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -118,6 +119,26 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="PokerCompareTest.should_compare_correct_when_given_two_chars" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;PokerCompareTest.should_compare_correct_when_given_two_chars&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="PokerCompareTest.should_straight_win_when_given_three_and_straight" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -138,33 +159,13 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PokerCompareTest.should_three_win_when_given_twoPairs_and_three" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;PokerCompareTest.should_three_win_when_given_twoPairs_and_three&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.PokerCompareTest.should_bigStraight_win_when_given_two_straight" />
+        <item itemvalue="Gradle.PokerCompareTest.should_compare_correct_when_given_two_chars" />
         <item itemvalue="Gradle.PokerCompareTest" />
+        <item itemvalue="Gradle.PokerCompareTest.should_bigStraight_win_when_given_two_straight" />
         <item itemvalue="Gradle.PokerCompareTest.should_straight_win_when_given_three_and_straight" />
         <item itemvalue="Gradle.PokerCompareTest.should_bigThree_win_when_given_two_three" />
-        <item itemvalue="Gradle.PokerCompareTest.should_three_win_when_given_twoPairs_and_three" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +179,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565934366017</updated>
-      <workItem from="1565934369226" duration="17054000" />
+      <workItem from="1565934369226" duration="17254000" />
     </task>
     <servers />
   </component>

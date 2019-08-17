@@ -97,15 +97,18 @@ public class PokerCompareTest {
 
     @Test
     public void should_bigStraight_win_when_given_two_straight() {
-//        String pokers1 = "2H3D4S5C6D";
-//        String pokers2 = "3C4D5S6C7D";
-//
-//        int result = compare.compare(pokers1, pokers2);
-//
-//        Assert.assertEquals(result, -1);
-
         String pokers1 = "2H3D4S5C6D";
         String pokers2 = "3C4D5S6C7D";
+
+        int result = compare.compare(pokers1, pokers2);
+
+        Assert.assertEquals(result, -1);
+    }
+
+    @Test
+    public void should_flush_win_when_given_straight_and_flush() {
+        String pokers1 = "3C4D5S6C7D";
+        String pokers2 = "2H3H5H9HKH";
 
         int result = compare.compare(pokers1, pokers2);
 
