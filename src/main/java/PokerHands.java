@@ -72,6 +72,8 @@ public class PokerHands {
             maxCountOfNums = maxCountOfNums > entry.getValue() ? maxCountOfNums : entry.getValue();
         }
         switch (maxCountOfNums) {
+            case 4:
+                return PokersType.FOUR_OF_A_KIND.getType();
             case 3:
                 if (repeatedNums.size() == 2) {
                     return PokersType.FULL_HOUSE.getType();

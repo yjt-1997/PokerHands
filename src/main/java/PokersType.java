@@ -5,7 +5,8 @@ public enum PokersType {
     THREE_OF_A_KIND(4),
     STRAIGHT(5),
     FLUSH(6),
-    FULL_HOUSE(7);
+    FULL_HOUSE(7),
+    FOUR_OF_A_KIND(8);
 
     private int type;
 
