@@ -36,6 +36,18 @@ public class PokerHands {
         }
     }
 
+    public int getDuplicateLength() {
+        return new HashSet<Integer>(nums).size();
+    }
+
+    public int getPokerType() {
+        if (getDuplicateLength() == 4) {
+            return PokersType.PAIR.getType();
+        }
+        return PokersType.HIGH_CARD.getType();
+    }
+
+
     public List<Integer> getNums() {
         return nums;
     }

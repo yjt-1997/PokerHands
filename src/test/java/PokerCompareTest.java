@@ -24,4 +24,14 @@ public class PokerCompareTest {
 
         Assert.assertEquals(result,-1);
     }
+
+    @Test
+    public void should_pair_win_when_given_highcard_and_pair(){
+        String pokers1 = "2H2D5S9CQD";
+        String pokers2 = "2C3D5S9CKD";
+
+        int result = compare.compare(pokers1,pokers2);
+
+        Assert.assertEquals(result,1);
+    }
 }

@@ -9,6 +9,9 @@ public class PokerCompare {
         List<Integer> nums1 = pokerHands1.getNums();
         List<Integer> nums2 = pokerHands2.getNums();
 
+        if (pokerHands1.getPokerType() != pokerHands2.getPokerType()) {
+            return pokerHands1.getPokerType() - pokerHands2.getPokerType() > 0 ? 1 : -1;
+        }
         for (int i = 0; i < nums1.size(); i++) {
             if (nums1.get(i) == null) {
                 break;
