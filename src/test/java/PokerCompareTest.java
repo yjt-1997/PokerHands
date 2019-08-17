@@ -174,4 +174,14 @@ public class PokerCompareTest {
 
         Assert.assertEquals(result, -1);
     }
+
+    @Test
+    public void should_bigStraightFlush_win_when_given_two_straightFlush() {
+        String pokers1 = "2H3H4H5H6H";
+        String pokers2 = "3H4H5H6H7H";
+
+        int result = compare.compare(pokers1, pokers2);
+
+        Assert.assertEquals(result, -1);
+    }
 }
