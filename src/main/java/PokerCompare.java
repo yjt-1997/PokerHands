@@ -2,6 +2,16 @@ import java.util.List;
 
 public class PokerCompare {
 
+    private final int HIGH_CARD = 1;
+    private final int PAIR = 2;
+    private final int TWO_PAIRS = 3;
+    private final int THREE_OF_A_KIND = 4;
+    private final int STRAIGHT = 5;
+    private final int FLUSH = 6;
+    private final int FULL_HOUSE = 7;
+    private final int FOUR_OF_A_KIND = 8;
+    private final int STRAIGHT_FLUSH = 9;
+
     public Integer compare(String pokers1, String pokers2) {
         PokerHands pokerHands1 = new PokerHands(pokers1);
         PokerHands pokerHands2 = new PokerHands(pokers2);
@@ -9,38 +19,33 @@ public class PokerCompare {
         List<Integer> nums1 = pokerHands1.getNums();
         List<Integer> nums2 = pokerHands2.getNums();
 
-        int a = pokerHands1.calculateType();
-        int b = pokerHands2.calculateType();
         if (pokerHands1.calculateType() != pokerHands2.calculateType()) {
             return pokerHands1.calculateType() > pokerHands2.calculateType() ? 1 : -1;
         }
         switch (pokerHands1.calculateType()) {
-            //单对和双对的比较方式是一样的
-            case 2:
-            case 3:
-            case 4:
-            case 8:{
+            case PAIR:
+            case TWO_PAIRS:
+            case THREE_OF_A_KIND:
+            case FOUR_OF_A_KIND: {
                 int result = compareList(pokerHands1.getRepeatedNum(), pokerHands2.getRepeatedNum());
                 removeRepeatedFromList(nums1, pokerHands1.getRepeatedNum());
                 removeRepeatedFromList(nums2, pokerHands2.getRepeatedNum());
                 return result == 0 ? compareList(nums1, nums2) : result;
             }
-            case 5:
-            case 6: {
+            case STRAIGHT:
+            case FLUSH: {
                 return compareList(nums1, nums2);
             }
-            case 7: {
+            case FULL_HOUSE: {
                 int threeOfP1 = pokerHands1.getCountEqual(3);
                 int threeOfP2 = pokerHands2.getCountEqual(3);
                 if (threeOfP1 == threeOfP2) {
                     int twoOfP1 = pokerHands1.getCountEqual(2);
                     int twoOfP2 = pokerHands2.getCountEqual(2);
-                    if (twoOfP1 > twoOfP2) {
-                        return 1;
-                    } else if (twoOfP1 < twoOfP2) {
-                        return -1;
-                    } else {
+                    if (twoOfP1 == twoOfP2) {
                         return 0;
+                    } else {
+                        return twoOfP1 > twoOfP2 ? 1 : -1;
                     }
                 } else {
                     return threeOfP1 > threeOfP2 ? 1 : -1;

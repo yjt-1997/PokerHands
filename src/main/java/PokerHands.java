@@ -3,7 +3,6 @@ import java.util.stream.IntStream;
 
 public class PokerHands {
 
-    private String pokerHands;
     private List<Integer> nums = new ArrayList<>();
     private Set<String> colors = new HashSet<>();
 
@@ -109,17 +108,8 @@ public class PokerHands {
         return 0;
     }
 
-
     public List<Integer> getNums() {
         return nums;
-    }
-
-    public void setNums(List<Integer> nums) {
-        this.nums = nums;
-    }
-
-    public Set<String> getColors() {
-        return colors;
     }
 
     public void setColors(Set<String> colors) {
