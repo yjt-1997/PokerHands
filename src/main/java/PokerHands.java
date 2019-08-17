@@ -73,6 +73,9 @@ public class PokerHands {
         }
         switch (maxCountOfNums) {
             case 3:
+                if (repeatedNums.size() == 2) {
+                    return PokersType.FULL_HOUSE.getType();
+                }
                 return PokersType.THREE_OF_A_KIND.getType();
             case 2:
                 return repeatedNums.size() == 3 ? PokersType.TWO_PAIRS.getType() : PokersType.PAIR.getType();
