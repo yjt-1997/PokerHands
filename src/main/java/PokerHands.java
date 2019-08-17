@@ -82,11 +82,13 @@ public class PokerHands {
             case 2:
                 return repeatedNums.size() == 3 ? PokersType.TWO_PAIRS.getType() : PokersType.PAIR.getType();
             case 1:
-                if (colors.size() == 1) {
-                    return PokersType.FLUSH.getType();
-                }
                 if (isStraight()) {
+                    if (colors.size() == 1) {
+                        return PokersType.STRAIGHT_FLUSH.getType();
+                    }
                     return PokersType.STRAIGHT.getType();
+                } else if (colors.size() == 1) {
+                    return PokersType.FLUSH.getType();
                 }
             default:
                 return PokersType.HIGH_CARD.getType();
