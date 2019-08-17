@@ -24,6 +24,9 @@ public class PokerCompare {
                 removeRepeatedFromList(nums2, pokerHands2.getRepeatedNum());
                 return result == 0 ? compareList(nums1, nums2) : result;
             }
+            case 5: {
+                return compareList(nums1, nums2);
+            }
         }
         return compareList(nums1, nums2);
     }
