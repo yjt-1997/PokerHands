@@ -13,13 +13,20 @@ public class PokerCompare {
             return pokerHands1.getPokerType() - pokerHands2.getPokerType() > 0 ? 1 : -1;
         }
         switch (pokerHands1.getPokerType()) {
+            //单对和双对的比较方式是一样的
             case 2:
+            case 3: {
                 int result = compareList(pokerHands1.getRepeatedNum(), pokerHands2.getRepeatedNum());
-                nums1.remove(pokerHands1.getRepeatedNum().get(0));
-                nums2.remove(pokerHands2.getRepeatedNum().get(0));
+                removeRepeatedFromList(nums1, pokerHands1.getRepeatedNum());
+                removeRepeatedFromList(nums2, pokerHands2.getRepeatedNum());
                 return result == 0 ? compareList(nums1, nums2) : result;
+            }
         }
         return compareList(nums1, nums2);
+    }
+
+    public void removeRepeatedFromList(List<Integer> origin, List<Integer> repeated) {
+        repeated.forEach(num -> origin.remove(num));
     }
 
     public int compareList(List<Integer> nums1, List<Integer> nums2) {

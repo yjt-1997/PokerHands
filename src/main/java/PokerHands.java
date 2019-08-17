@@ -3,7 +3,7 @@ import java.util.*;
 public class PokerHands {
 
     private String pokerHands;
-    private List<Integer> nums = new LinkedList<>();
+    private List<Integer> nums = new ArrayList<>();
     private Set<String> colors = new HashSet<>();
 
     public PokerHands(String pokerHands) {
@@ -57,22 +57,16 @@ public class PokerHands {
                 repeatedNums.add(entry.getKey());
             }
         }
+        Collections.sort(repeatedNums);
+        Collections.reverse(repeatedNums);
         return repeatedNums;
     }
-
-//    public int compareDuplicateMap(PokerHands pokerHands) {
-//        Map<Integer, Integer> numsMap = pokerHands.getDuplicateMap();
-//        for (Map.Entry<Integer, Integer> entry : numsMap.entrySet()) {
-//            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
-//        }
-//    }
-
 
     public int getPokerType() {
         Map<Integer, Integer> numsMap = getDuplicateMap();
         switch (numsMap.size()) {
             case 3:
-                return PokersType.TWO_PAIRS.getType();
+                    return getRepeatedNum().size() == 2 ? PokersType.TWO_PAIRS.getType() : PokersType.THREE_OF_A_KIND.getType();
             case 4:
                 return PokersType.PAIR.getType();
             case 5:

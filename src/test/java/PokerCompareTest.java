@@ -44,4 +44,34 @@ public class PokerCompareTest {
 
         Assert.assertEquals(result,-1);
     }
+
+    @Test
+    public void should_twoPairs_win_when_given_aPair_and_twoPairs(){
+        String pokers1 = "2H2D5S9CKD";
+        String pokers2 = "3C3D5S5CTD";
+
+        int result = compare.compare(pokers1,pokers2);
+
+        Assert.assertEquals(result,-1);
+    }
+
+    @Test
+    public void should_bigTwoPairs_win_when_given_two_twoPairs(){
+        String pokers1 = "2H2D5S5CKD";
+        String pokers2 = "3C3D5S5CTD";
+
+        int result = compare.compare(pokers1,pokers2);
+
+        Assert.assertEquals(result,-1);
+    }
+
+    @Test
+    public void should_three_win_when_given_twoPairs_and_three(){
+        String pokers1 = "2H2D5SKCKD";
+        String pokers2 = "3C3D3S5CTD";
+
+        int result = compare.compare(pokers1,pokers2);
+
+        Assert.assertEquals(result,-1);
+    }
 }
