@@ -18,7 +18,8 @@ public class PokerCompare {
             //单对和双对的比较方式是一样的
             case 2:
             case 3:
-            case 4: {
+            case 4:
+            case 8:{
                 int result = compareList(pokerHands1.getRepeatedNum(), pokerHands2.getRepeatedNum());
                 removeRepeatedFromList(nums1, pokerHands1.getRepeatedNum());
                 removeRepeatedFromList(nums2, pokerHands2.getRepeatedNum());

@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="625da450-a562-4da5-a85f-4931462207f8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PokerHands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PokerHands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PokersType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PokersType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PokerCompare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PokerCompare.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PokerCompareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PokerCompareTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,13 +57,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.PokerCompareTest">
+  <component name="RunManager" selected="Gradle.PokerCompareTest.should_bigFour_win_when_given_twoFour">
     <configuration name="PokerCompareTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;PokerCompareTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="PokerCompareTest.should_bigFour_win_when_given_twoFour" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;PokerCompareTest.should_bigFour_win_when_given_twoFour&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -139,33 +158,13 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PokerCompareTest.should_fullHouse_win_when_given_flush_and_fullHouse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;PokerCompareTest.should_fullHouse_win_when_given_flush_and_fullHouse&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.PokerCompareTest.should_bigFour_win_when_given_twoFour" />
         <item itemvalue="Gradle.PokerCompareTest" />
         <item itemvalue="Gradle.PokerCompareTest.should_four_win_when_given_fullHouse_and_four" />
         <item itemvalue="Gradle.PokerCompareTest.should_compare_correct_when_given_two_chars" />
         <item itemvalue="Gradle.PokerCompareTest.should_bigFullHouse_win_when_given_twoFullHouse" />
-        <item itemvalue="Gradle.PokerCompareTest.should_fullHouse_win_when_given_flush_and_fullHouse" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +178,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565934366017</updated>
-      <workItem from="1565934369226" duration="18551000" />
+      <workItem from="1565934369226" duration="18723000" />
     </task>
     <servers />
   </component>
@@ -207,7 +206,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/PokerCompare.java</url>
-          <line>62</line>
+          <line>63</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
