@@ -36,7 +36,8 @@ public class PokerHands {
         }
     }
 
-    public Map getDuplicateMap() {
+    //计算有几张不同的牌，并计算相同的牌的数量
+    public Map getCountMap() {
         Map<Integer, Integer> numsMap = new HashMap<>();
         nums.forEach(num -> {
             if (!numsMap.containsKey(num)) {
@@ -51,7 +52,7 @@ public class PokerHands {
 
     public List<Integer> getRepeatedNum() {
         List<Integer> repeatedNums = new ArrayList<>();
-        Map<Integer, Integer> numsMap = getDuplicateMap();
+        Map<Integer, Integer> numsMap = getCountMap();
         for (Map.Entry<Integer, Integer> entry : numsMap.entrySet()) {
             if (entry.getValue() > 1) {
                 repeatedNums.add(entry.getKey());
@@ -62,18 +63,32 @@ public class PokerHands {
         return repeatedNums;
     }
 
-    public int getPokerType() {
-        Map<Integer, Integer> numsMap = getDuplicateMap();
-        switch (numsMap.size()) {
+    public Integer calculateType() {
+        Map<Integer, Integer> numsMap = getCountMap();
+        List<Integer> repeatedNums = getRepeatedNum();
+        int maxCountOfNums = 0;
+        for (Map.Entry<Integer, Integer> entry : numsMap.entrySet()) {
+            maxCountOfNums = maxCountOfNums > entry.getValue() ? maxCountOfNums : entry.getValue();
+        }
+        switch (maxCountOfNums) {
             case 3:
-                    return getRepeatedNum().size() == 2 ? PokersType.TWO_PAIRS.getType() : PokersType.THREE_OF_A_KIND.getType();
-            case 4:
-                return PokersType.PAIR.getType();
-            case 5:
-//                return PokersType.HIGH_CARD.getType();
+                return PokersType.THREE_OF_A_KIND.getType();
+            case 2:
+                return repeatedNums.size() == 3 ? PokersType.TWO_PAIRS.getType() : PokersType.PAIR.getType();
+            case 1:
             default:
                 return PokersType.HIGH_CARD.getType();
         }
+    }
+
+    public int getCountEqual(int count) {
+        Map<Integer, Integer> numsMap = getCountMap();
+        for (Map.Entry<Integer, Integer> entry : numsMap.entrySet()) {
+            if (entry.getValue() == count) {
+                return entry.getKey();
+            }
+        }
+        return 0;
     }
 
 

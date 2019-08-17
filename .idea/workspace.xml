@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PokerCompare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PokerCompare.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PokerHands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PokerHands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PokersType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PokersType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PokerCompareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PokerCompareTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,7 +58,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.PokerCompareTest.should_three_win_when_given_twoPairs_and_three">
+  <component name="RunManager" selected="Gradle.PokerCompareTest.should_bigThree_win_when_given_two_three">
     <configuration name="PokerCompareTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -80,12 +79,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PokerCompareTest.should_bigPair_win_when_given_two_pairs" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PokerCompareTest.should_bigThree_win_when_given_two_three" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;PokerCompareTest.should_bigPair_win_when_given_two_pairs&quot;" />
+        <option name="scriptParameters" value="--tests &quot;PokerCompareTest.should_bigThree_win_when_given_two_three&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -162,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.PokerCompareTest.should_three_win_when_given_twoPairs_and_three" />
+        <item itemvalue="Gradle.PokerCompareTest.should_bigThree_win_when_given_two_three" />
         <item itemvalue="Gradle.PokerCompareTest" />
+        <item itemvalue="Gradle.PokerCompareTest.should_three_win_when_given_twoPairs_and_three" />
         <item itemvalue="Gradle.PokerCompareTest.should_bigTwoPairs_win_when_given_two_twoPairs" />
         <item itemvalue="Gradle.PokerCompareTest.should_twoPairs_win_when_given_aPair_and_twoPairs" />
-        <item itemvalue="Gradle.PokerCompareTest.should_bigPair_win_when_given_two_pairs" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +179,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565934366017</updated>
-      <workItem from="1565934369226" duration="12546000" />
+      <workItem from="1565934369226" duration="16135000" />
     </task>
     <servers />
   </component>
@@ -202,14 +201,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/PokerHands.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/PokerCompare.java</url>
           <line>11</line>
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
