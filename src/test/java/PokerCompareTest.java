@@ -7,12 +7,12 @@ public class PokerCompareTest {
 
     @Test
     public void should_compare_correct_when_given_two_chars() {
-        String pokers1 = "KC";
-        String pokers2 = "3C";
+        String pokers1 = "3C";
+        String pokers2 = "KC";
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, 1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
     }
 
     @Test
@@ -22,17 +22,27 @@ public class PokerCompareTest {
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, -1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
+    }
+
+    @Test
+    public void should_same_when_given_two_same_highcards() {
+        String pokers1 = "2H4D5S9CQD";
+        String pokers2 = "2H4D5S9CQD";
+
+        int result = compare.compare(pokers1, pokers2);
+
+        Assert.assertEquals(result, CompareResult.THE_SAME.getResult());
     }
 
     @Test
     public void should_pair_win_when_given_highcard_and_pair() {
-        String pokers1 = "2H2D5S9CQD";
-        String pokers2 = "2C3D5S9CKD";
+        String pokers1 = "2C3D5S9CKD";
+        String pokers2 = "2H2D5S9CQD";
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, 1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
     }
 
     @Test
@@ -42,7 +52,7 @@ public class PokerCompareTest {
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, -1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
     }
 
     @Test
@@ -52,7 +62,7 @@ public class PokerCompareTest {
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, -1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
     }
 
     @Test
@@ -62,7 +72,7 @@ public class PokerCompareTest {
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, -1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
     }
 
     @Test
@@ -72,7 +82,7 @@ public class PokerCompareTest {
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, -1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
     }
 
     @Test
@@ -82,7 +92,17 @@ public class PokerCompareTest {
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, -1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
+    }
+
+    @Test
+    public void should_bigThree_win_when_given_two_sameThreeButDifferentSingle() {
+        String pokers1 = "3C3D3S5C9D";
+        String pokers2 = "3C3D3S5CTD";
+
+        int result = compare.compare(pokers1, pokers2);
+
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
     }
 
     @Test
@@ -92,7 +112,7 @@ public class PokerCompareTest {
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, -1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
     }
 
     @Test
@@ -102,7 +122,7 @@ public class PokerCompareTest {
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, -1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
     }
 
     @Test
@@ -112,7 +132,7 @@ public class PokerCompareTest {
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, -1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
     }
 
     @Test
@@ -122,7 +142,7 @@ public class PokerCompareTest {
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, -1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
     }
 
     @Test
@@ -132,7 +152,7 @@ public class PokerCompareTest {
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, -1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
     }
 
     @Test
@@ -142,7 +162,17 @@ public class PokerCompareTest {
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, -1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
+    }
+
+    @Test
+    public void should_big_pair_win_when_given_twoFullHouse_sameThree() {
+        String pokers1 = "3H3D5S5C3D";
+        String pokers2 = "3H3D6S6C3D";
+
+        int result = compare.compare(pokers1, pokers2);
+
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
     }
 
     @Test
@@ -152,7 +182,7 @@ public class PokerCompareTest {
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, -1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
     }
 
     @Test
@@ -162,7 +192,17 @@ public class PokerCompareTest {
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, -1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
+    }
+
+    @Test
+    public void should_bigSingle_win_when_given_twoFour_sameFour_differentSingle() {
+        String pokers1 = "3H3D3S4C3D";
+        String pokers2 = "3H3D3S5C3D";
+
+        int result = compare.compare(pokers1, pokers2);
+
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
     }
 
     @Test
@@ -172,7 +212,7 @@ public class PokerCompareTest {
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, -1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
     }
 
     @Test
@@ -182,6 +222,6 @@ public class PokerCompareTest {
 
         int result = compare.compare(pokers1, pokers2);
 
-        Assert.assertEquals(result, -1);
+        Assert.assertEquals(result, CompareResult.PLAYER2_WIN.getResult());
     }
 }
