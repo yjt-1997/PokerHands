@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="625da450-a562-4da5-a85f-4931462207f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CompareResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PokerCompareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PokerCompareTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -181,7 +177,7 @@
       <option name="presentableId" value="Default" />
       <updated>1565934366017</updated>
       <workItem from="1565934369226" duration="22050000" />
-      <workItem from="1566120875251" duration="1972000" />
+      <workItem from="1566120875251" duration="2039000" />
     </task>
     <servers />
   </component>

@@ -20,6 +20,6 @@
 ## 第十九个用例：[GIVEN]: 2H2D2S8C2D and 3H3D3S5C3D => Player2 Win(两个四带一，四个更大的胜出)
 ## 第二十个用例：[GIVEN]: 3H3D3S4C3D and 3H3D3S5C3D => Player2 Win(两个四带一，四个相同时单牌大的胜出)
 ## 第二十一个用例：[GIVEN]: 2H2D2S8C2D and 2H3H4H5H6H => Player2 Win(四带一与同花顺，同花顺胜出)
-## 第二十个用例：[GIVEN]: 2H3H4H5H6H and 3H4H5H6H7H => Player2 Win(两个同花顺，单牌大的胜出)
+## 第二十二个用例：[GIVEN]: 2H3H4H5H6H and 3H4H5H6H7H => Player2 Win(两个同花顺，单牌大的胜出)
 
 
